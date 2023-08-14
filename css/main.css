@@ -689,7 +689,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .bg-brightRed {
-  background-color: hsl (12, 88%, 59%);
+  --tw-bg-opacity: 1;
+  background-color: hsl(12 88% 59% / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -698,15 +699,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .bg-brightRedSupLight {
-  background-color: hsl (12, 88%, 95%);
+  --tw-bg-opacity: 1;
+  background-color: hsl(12 88% 95% / var(--tw-bg-opacity));
 }
 
 .bg-veryLightGray {
-  background-color: hsl (0 , 0%, 96 %);
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 98% / var(--tw-bg-opacity));
 }
 
 .bg-veryDarkBlue {
-  background-color: hsl (233, 12%, 13%);
+  --tw-bg-opacity: 1;
+  background-color: hsl(233 12% 13% / var(--tw-bg-opacity));
 }
 
 .p-6 {
@@ -789,21 +793,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
-.leading-tight {
-  line-height: 1.25;
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-darkGrayishBlue {
-  color: hsl (227, 12%, 61%);
+  --tw-text-opacity: 1;
+  color: hsl(227 12% 61% / var(--tw-text-opacity));
 }
 
 .text-brightRed {
-  color: hsl (12, 88%, 59%);
+  --tw-text-opacity: 1;
+  color: hsl(12 88% 59% / var(--tw-text-opacity));
 }
 
 .shadow-2xl {
@@ -817,68 +819,70 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-body{
-  background-image: url('../img/bg-tablet-pattern');
+body {
+  background-image: url('../img/bg-tablet-pattern.svg');
   background-repeat: no-repeat;
   background-size: 800px;
   background-position: 90% -25%;
 }
 
-#cta{
-  background-image: url('../img/bg-simplify-section-desktop');
+#cta {
+  background-image: url('../img/bg-simplify-section-desktop.svg');
   background-repeat: no-repeat;
 }
 
-@media(max-width:576px){
-  body{
+@media (max-width: 576px) {
+  body {
     background-position: 50px -50px;
     background-size: 500px;
   }
 
-  #cta{
-    background-image: url('../img/bg-simplify-section-mobile');
+  #cta {
+    background-image: url('../img/bg-simplify-section-mobile.svg');
   }
+}
 
-  .hamburger{
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    transition: all 0.25s;
-    position: relative;
-  }
+/* Hamburger Menu */
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
 }
 
 .hamburger-top,
 .hamburger-middle,
-.hamburger-bottom{
+.hamburger-bottom {
   position: absolute;
   top: 0;
   left: 0;
   width: 24px;
   height: 2px;
-  background:#000;
+  background: #000;
   transform: rotate(0);
   transition: all 0.5s;
 }
 
-.hamburger-middle{
+.hamburger-middle {
   transform: translateY(7px);
 }
 
-.hamburger-bottom{
+.hamburger-bottom {
   transform: translateY(14px);
 }
 
-.open{
+.open {
   transform: rotate(90deg);
   transform: translateY(0px);
 }
 
-.open.hamburger-top{
+.open .hamburger-top {
   transform: rotate(45deg) translateY(6px) translate(6px);
 }
 
-.open .hamburger-middle{
+.open .hamburger-middle {
   display: none;
 }
 
@@ -887,7 +891,8 @@ body{
 }
 
 .hover\:bg-brightRedLight:hover {
-  background-color: hsl (12, 88%, 69%);
+  --tw-bg-opacity: 1;
+  background-color: hsl(12 88% 69% / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-900:hover {
@@ -896,11 +901,13 @@ body{
 }
 
 .hover\:text-darkGrayishBlue:hover {
-  color: hsl (227, 12%, 61%);
+  --tw-text-opacity: 1;
+  color: hsl(227 12% 61% / var(--tw-text-opacity));
 }
 
 .hover\:text-brightRed:hover {
-  color: hsl (12, 88%, 59%);
+  --tw-text-opacity: 1;
+  color: hsl(12 88% 59% / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -1003,4 +1010,3 @@ body{
     line-height: 2.5rem;
   }
 }
-  
